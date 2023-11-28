@@ -1,5 +1,5 @@
 # Python_CAN_Buslogging_MDF
-MDF CAN Buslogging file filtering merging and cutting with asammdf
+MDF CAN Buslogging file [filtering, merging, cutting] with asammdf
 
 This python code uses the MDF class from asammdf to be able to use it's methods, in that way we use:
 
@@ -7,6 +7,8 @@ This python code uses the MDF class from asammdf to be able to use it's methods,
 2. resample method: To resample the file into the wanted time sampling. (Uses interpolation)
 3. cut method: To cut the file from start time and end time variables. (Expects that the mdf file start time is less than wanted start time and end time is greater than wanted end time)
 4. to_dataframe: Used to further print a pandas dataframe that corresponds to the new file.
+
+For more information about asammdf, visit asammdf API: https://asammdf.readthedocs.io/en/master/api.html#
 
 
 To change signals according to your needs:
