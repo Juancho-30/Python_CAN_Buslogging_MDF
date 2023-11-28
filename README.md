@@ -11,7 +11,7 @@ This python code uses the MDF class from asammdf, pandas, Styleframe, and numpy 
 6. ExcelWriter: For excel generation and styling.
 
 
-IMPORTANT Information:\
+# IMPORTANT Information:\
 \
 1: This code was made for specific needs, to adjust to your needs needs to be substantially changed. \
 2: The excel export uses Excel map files and interpolation to generate new data and introduce it into the dataframe, you will probably don't need that so just DELETE it if you clone the repo.\
@@ -34,7 +34,7 @@ required_channels = [
         'Current_RMS'
         ]
 
-
+# More Information
 For more information about asammdf API, visit: https://asammdf.readthedocs.io/en/master/api.html#
 For more information about pandas API; visit: https://pandas.pydata.org/docs/reference/index.html#
 For more information about styleframe API, visit: https://styleframe.readthedocs.io/en/latest/api_documentation.html
