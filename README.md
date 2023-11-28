@@ -8,7 +8,7 @@ This python code uses the MDF class from asammdf, pandas, Styleframe, and numpy 
 3. cut method: To cut the file from start time and end time variables. (Expects that the mdf file start time is less than wanted start time and end time is greater than wanted end time)
 4. to_dataframe: Used to further print a pandas dataframe that corresponds to the new file.
 5. insert: Insert list as column in dataframe.
-6. ExcelWriter: For excel generation and styling.
+6. ExcelWriter instance: For excel generation and styling.
 
 
 # IMPORTANT Information:
