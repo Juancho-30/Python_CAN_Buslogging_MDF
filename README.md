@@ -13,7 +13,7 @@ This python code uses the MDF class from asammdf, pandas, Styleframe, and numpy 
 For more information about asammdf, visit asammdf API: https://asammdf.readthedocs.io/en/master/api.html#
 
 IMPORTANT Information:
-1: This code was made for specific needs, to adjust to your needs needs to be substantially changed.
+1: This code was made for specific needs, to adjust to your needs needs to be substantially changed. /n
 2: The excel export uses Excel map files and interpolation to generate new data and introduce it into the dataframe, you will probably don't need that so just DELETE it if you clone the repo.
 3: The saving of the files is done with a writen absolute path and then saves with the filename with the activity of that day and the date extracted from the MDF File.
 
