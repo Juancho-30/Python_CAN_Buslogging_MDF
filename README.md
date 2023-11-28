@@ -35,6 +35,6 @@ required_channels = [
         ]
 
 # More Information
-For more information about asammdf API, visit: https://asammdf.readthedocs.io/en/master/api.html# \
-For more information about pandas API; visit: https://pandas.pydata.org/docs/reference/index.html# \
-For more information about styleframe API, visit: https://styleframe.readthedocs.io/en/latest/api_documentation.html# 
+For more information about asammdf API, visit: https://asammdf.readthedocs.io/en/master/api.html \
+For more information about pandas API; visit: https://pandas.pydata.org/docs/reference/index.html \
+For more information about styleframe API, visit: https://styleframe.readthedocs.io/en/latest/api_documentation.html 
