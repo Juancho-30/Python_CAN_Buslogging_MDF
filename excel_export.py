@@ -3,8 +3,7 @@ import pandas as pd
 from asammdf import MDF, Signal, blocks
 from styleframe import StyleFrame, Styler, utils
 
-path = 'C:/Users/VWK3W84/Documents/files/Merged_filtered_files/20230817_12_4_CANLogger_RwandaTractorMDF.mf4'
-# print(path_filename)
+path = ''
 
 
 def linear_interpolation_3D(x1, y1, z1, x2, y2, x3, y3, z3):
