@@ -10,16 +10,16 @@ This python code uses the MDF class from asammdf, pandas, Styleframe, and numpy 
 5. insert: Insert list as column in dataframe.
 6. ExcelWriter: For excel generation and styling.
 
-For more information about asammdf, visit asammdf API: https://asammdf.readthedocs.io/en/master/api.html#
 
-IMPORTANT Information:
+IMPORTANT Information:\
+\
 1: This code was made for specific needs, to adjust to your needs needs to be substantially changed. \
 2: The excel export uses Excel map files and interpolation to generate new data and introduce it into the dataframe, you will probably don't need that so just DELETE it if you clone the repo.\
 3: The saving of the files is done with a writen absolute path and then saves with the filename with the activity of that day and the date extracted from the MDF File.\
 \
 To change signals according to your needs:
   Change the: required_channels list:
-  \
+  \\
 required_channels = [
         'BMS_U_Batt',
         'BMS_SOC',
@@ -34,3 +34,7 @@ required_channels = [
         'Current_RMS'
         ]
 
+
+For more information about asammdf API, visit: https://asammdf.readthedocs.io/en/master/api.html#
+For more information about pandas API; visit: https://pandas.pydata.org/docs/reference/index.html#
+For more information about styleframe API, visit: https://styleframe.readthedocs.io/en/latest/api_documentation.html
