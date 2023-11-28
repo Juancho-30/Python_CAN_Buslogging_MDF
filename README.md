@@ -18,8 +18,8 @@ IMPORTANT Information:\
 3: The saving of the files is done with a writen absolute path and then saves with the filename with the activity of that day and the date extracted from the MDF File.\
 \
 To change signals according to your needs:
-  Change the: required_channels list:
-  \\
+  Change the: required_channels list:\
+  \
 required_channels = [
         'BMS_U_Batt',
         'BMS_SOC',
