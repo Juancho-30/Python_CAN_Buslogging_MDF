@@ -8,7 +8,7 @@ from scipy.stats import norm
 import statistics 
 
 
-path = 'C:/Users/VWK3W84/Documents/files/Merged_filtered_files/20230829_15_46_CANLogger_RwandaTractorMDF.mf4'
+path = '' #Path to your already preprocessed file aka. merged and filtered
 # print(path_filename)
 
 
@@ -57,19 +57,7 @@ def map_values(num_rpm, num_idc, df):
     #Return values for 3d interpolation
     return lower_x, lower_y, upper_x, upper_y, lower_z, upper_z 
 
-required_channels = [
-        'BMS_U_Batt',
-        'BMS_SOC',
-        'BMS_I_Batt', 
-        'Cell_T_max',
-        'Controller_Temperature',
-        'Motor_Temperature',
-        'Aussentemperatur',
-        'GPS_Speed', 
-        'Capacitor_Voltage',
-        'Motor_RPM', 
-        'Current_RMS'
-        ]
+required_channels = [] # List of channels that map your variables (Might be omitted)
 
 mdf_res = MDF(path,required_channels)
 mdf_starttime = mdf_res.start_time
@@ -81,18 +69,7 @@ hours = int(f"{mdf_res.start_time:%H:%M:%S}"[0:2])
 # Generate Dataframe and manipulate columns
 mdf_df = mdf_res.to_dataframe(channels=required_channels)
 mdf_df.index.names = ['Time[s]']
-mdf_df = mdf_df.rename(columns={'BMS_U_Batt': "BMS_U_Batt\nBattery voltage [V]",
-                                'BMS_I_Batt': "BMS_I_Batt\nBattery current [A]", 
-                                'BMS_SOC': "BMS_SOC\nBattery SOC [%]",
-                                'Cell_T_max': "Cell_T_max\nBattery temperature [°C]",
-                                'Controller_Temperature': "Controller_Temperature\nMotor controller temperature [°C]",
-                                'Motor_Temperature': "Motor_Temperature\nElectric motor temperature [°C]",
-                                'Aussentemperatur': "Aussentemperatur\nAmbient air temperature [°C]",
-                                'GPS_Speed': "GPS_Speed\nGPS speed [m/s]",
-                                'Capacitor_Voltage': "Capacitor_Voltage\nElectric motor dc voltage [V]",
-                                'Motor_RPM': "Motor_RPM\nElectric motor speed [rpm]",
-                                'Current_RMS': "Current_RMS\nElectric motor phase current [A]",
-                                              })
+mdf_df = mdf_df.rename(columns={}) # If you want to rename your variables you can input here
 
 
 # New Empty list object, to append all the interpolated torques and after getting torque calculate every efficiency item
