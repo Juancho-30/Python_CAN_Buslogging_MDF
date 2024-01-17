@@ -2,13 +2,7 @@ import numpy as np
 import pandas as pd
 from asammdf import MDF, Signal, blocks
 
-path_list = ['C:/Users/VWK3W84/Documents/files/2023_09_04/20230904081705_71878400578_CANLogger_RwandaTractorMDF.mf4',
-             'C:/Users/VWK3W84/Documents/files/2023_09_04/20230904084828_71878400578_CANLogger_RwandaTractorMDF.mf4',
-             'C:/Users/VWK3W84/Documents/files/2023_09_04/20230904091732_71878400578_CANLogger_RwandaTractorMDF.mf4',
-             'C:/Users/VWK3W84/Documents/files/2023_09_04/20230904094532_71878400578_CANLogger_RwandaTractorMDF.mf4',
-             'C:/Users/VWK3W84/Documents/files/2023_09_04/20230904101332_71878400578_CANLogger_RwandaTractorMDF.mf4',
-             'C:/Users/VWK3W84/Documents/files/2023_09_04/20230904104132_71878400578_CANLogger_RwandaTractorMDF.mf4',
-             'C:/Users/VWK3W84/Documents/files/2023_09_04/20230904105923_71878400578_CANLogger_RwandaTractorMDF.mf4']
+path_list = [] # Here goes the path of your files
 
 start = input("Introduce the start time in 2 digit format as the following HH:MM ")
 
@@ -19,19 +13,7 @@ date = input("Introduce the date together as YYYYMMDD ")
 start_minutes = (int(start[0:2]) * 60) + (int(start[3:]))
 end_minutes = (int(end[0:2]) * 60) + (int(end[3:]))
 
-required_channels = [
-        'BMS_U_Batt',
-        'BMS_SOC',
-        'BMS_I_Batt', 
-        'Cell_T_max',
-        'Controller_Temperature',
-        'Motor_Temperature',
-        'Aussentemperatur',
-        'GPS_Speed', 
-        'Capacitor_Voltage',
-        'Motor_RPM', 
-        'Current_RMS'
-        ]
+required_channels = [] # Here goes the channels that map your measured variables
 mdf_list = []
 for path in path_list:
     mdf_list.append(MDF(path,required_channels))
@@ -43,7 +25,7 @@ mdf_hours_start = int(f"{mdf_merged.start_time:%H}")
 mdf_minutes_start = int(f"{mdf_merged.start_time:%M}")
 
 position = int(path.find(date) + 8)
-mdf_hours_end = (int(path[position:position+2]) + 2) # Add + 2 For Kigali Rwanda time
+mdf_hours_end = (int(path[position:position+2]) + 2) # Add +2 to adjust time
 mdf_minutes_end = (int(path[position+2:position+4]))
 
 mdf_total_minutes_start = mdf_hours_start * 60 + mdf_minutes_start
